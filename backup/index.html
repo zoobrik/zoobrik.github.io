@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guru Game — Premium Gaming Lounge</title>
+<meta name="description" content="Book PS5 & Xbox stations, compete in tournaments, and unlock member perks at Guru Game." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="#" class="logo" aria-label="Guru Game home">
+      <span class="logo__bracket">[</span>GURU<span class="logo__dot">.</span>GAME<span class="logo__bracket">]</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#vaja" data-i18n="nav.locations">Locations</a>
+      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="#booking" data-i18n="nav.booking">Booking</a>
+      <a href="#guru" data-i18n="nav.guru_card">Guru Card</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-switcher__btn" id="langBtn" aria-expanded="false" aria-haspopup="listbox">
+          <span id="langCurrent">🇬🇪 KA</span><span class="lang-switcher__arrow">▾</span>
+        </button>
+        <div class="lang-switcher__dropdown" id="langDropdown" role="listbox">
+          <button data-lang="en">🇬🇧 EN — English</button>
+          <button data-lang="ka" class="active">🇬🇪 KA — Georgian</button>
+          <button data-lang="ru">🇷🇺 RU — Russian</button>
+        </div>
+      </div>
+      <button class="btn btn--primary btn--sm" id="reserveNavBtn" data-i18n="nav.reserve_now">Reserve Now</button>
+      <button class="nav__burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <div class="nav__mobile" id="mobileMenu" hidden>
+    <a href="#vaja" data-i18n="nav.locations">Locations</a>
+    <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+    <a href="#booking" data-i18n="nav.booking">Booking</a>
+    <a href="#guru" data-i18n="nav.guru_card">Guru Card</a>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero__grid-bg" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <img src="images/guru-game-logo.png" alt="Guru Game" class="hero__logo" />
+    <div class="hero__ctas">
+      <button class="btn btn--primary" id="bookHeroBtn" data-i18n="hero.book_session">Book a Session →</button>
+      <button class="btn btn--outline" id="viewPricingBtn" data-i18n="hero.view_pricing">View Prices</button>
+    </div>
+  </div>
+
+  <div class="hero__gradient-line" aria-hidden="true"></div>
+</section>
+
+<!-- ========== LOCATION: VAJA-PSHAVELA ========== -->
+<section id="vaja" class="location">
+  <div class="container">
+    <div class="section-head section-head--row">
+      <div>
+        <span class="section-head__kicker" data-i18n="locations.vaja_kicker">01 — Vaja-Pshavela</span>
+        <h2 class="section-head__title" data-i18n="locations.vaja_title">Vaja-Pshavela Ave. 19</h2>
+      </div>
+      <span class="location__hours">11:00 – 6:00</span>
+    </div>
+
+    <div class="location__grid">
+
+      <div class="station-card">
+        <div class="station-card__top">
+          <span class="station-card__count">3</span>
+          <span class="station-card__emoji">🎮</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.open_ps5">Open Area PS5</h3>
+        <p class="station-card__desc" data-i18n="locations.open_ps5_desc">Open gaming zone with PS5 — perfect for casual play and walk-ins.</p>
+      </div>
+
+      <div class="station-card">
+        <div class="station-card__top">
+          <span class="station-card__count">2</span>
+          <span class="station-card__emoji">🏠</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.small_vip">Small VIP</h3>
+        <p class="station-card__desc" data-i18n="locations.small_vip_desc">Compact private room with PS5, ideal for solo sessions or a duo.</p>
+      </div>
+
+      <div class="station-card station-card--featured">
+        <div class="station-card__top">
+          <span class="station-card__count">8</span>
+          <span class="station-card__emoji">👑</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.standard_vip">Standard VIP</h3>
+        <p class="station-card__desc" data-i18n="locations.standard_vip_desc">Private room with PS5, premium peripherals, and dedicated seating.</p>
+      </div>
+
+      <div class="station-card">
+        <div class="station-card__top">
+          <span class="station-card__count">1</span>
+          <span class="station-card__emoji">🎭</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.theater">Theater</h3>
+        <p class="station-card__desc" data-i18n="locations.theater_desc">Large-screen theater setup for group gaming and cinematic experiences.</p>
+      </div>
+
+    </div>
+
+    <div class="location__games">
+      <p class="location__games-label" data-i18n="locations.games_title">Available Games</p>
+      <div class="game-slider">
+        <button class="game-slider__btn game-slider__btn--prev" aria-label="Previous">&#8249;</button>
+        <div class="game-covers">
+          <div class="game-cover">
+            <img src="images/fifa26.jpg" alt="FIFA 26" />
+            <span>FIFA 26</span>
+          </div>
+        </div>
+        <button class="game-slider__btn game-slider__btn--next" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== LOCATION: DIDI DIGOMI ========== -->
+<section id="digomi" class="location location--alt">
+  <div class="container">
+    <div class="section-head section-head--row">
+      <div>
+        <span class="section-head__kicker" data-i18n="locations.digomi_kicker">02 — Didi Digomi</span>
+        <h2 class="section-head__title" data-i18n="locations.digomi_title">Didi Digomi, 4 Petre Iberi St</h2>
+      </div>
+      <span class="location__hours">14:00 – 4:00</span>
+    </div>
+
+    <div class="location__grid">
+
+      <div class="station-card">
+        <div class="station-card__top">
+          <span class="station-card__count">3</span>
+          <span class="station-card__emoji">🎮</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.open_ps5">Open Area PS5</h3>
+        <p class="station-card__desc" data-i18n="locations.open_ps5_desc">Open gaming zone with PS5 — perfect for casual play and walk-ins.</p>
+      </div>
+
+      <div class="station-card">
+        <div class="station-card__top">
+          <span class="station-card__count">2</span>
+          <span class="station-card__emoji">🏎️</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.xbox_wheels">Xbox + Wheel</h3>
+        <p class="station-card__desc" data-i18n="locations.xbox_wheels_desc">Xbox Series X with a full racing wheel rig — the ultimate sim racing setup.</p>
+      </div>
+
+      <div class="station-card">
+        <div class="station-card__top">
+          <span class="station-card__count">4</span>
+          <span class="station-card__emoji">👑</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.vip">VIP</h3>
+        <p class="station-card__desc" data-i18n="locations.vip_desc">Private room with PS5 and premium peripherals for an elevated experience.</p>
+      </div>
+
+      <div class="station-card station-card--ultra">
+        <div class="station-card__top">
+          <span class="station-card__count">1</span>
+          <span class="station-card__emoji">⭐</span>
+        </div>
+        <h3 class="station-card__name" data-i18n="locations.ultra_vip">Ultra VIP</h3>
+        <p class="station-card__desc" data-i18n="locations.ultra_vip_desc">The premium suite — top-tier setup, exclusive access, and the ultimate gaming environment.</p>
+      </div>
+
+    </div>
+
+    <div class="location__games">
+      <p class="location__games-label" data-i18n="locations.games_title">Available Games</p>
+      <div class="game-slider">
+        <button class="game-slider__btn game-slider__btn--prev" aria-label="Previous">&#8249;</button>
+        <div class="game-covers">
+          <div class="game-cover">
+            <img src="images/mk1.jpg" alt="Mortal Kombat 1" />
+            <span>Mortal Kombat 1</span>
+          </div>
+          <div class="game-cover">
+            <img src="images/ufc5.jpg" alt="UFC 5" />
+            <span>UFC 5</span>
+          </div>
+          <div class="game-cover">
+            <img src="images/nba2k24.jpg" alt="NBA 2K24" />
+            <span>NBA 2K24</span>
+          </div>
+          <div class="game-cover">
+            <img src="images/fifa26.jpg" alt="FIFA 26" />
+            <span>FIFA 26</span>
+          </div>
+          <div class="game-cover">
+            <img src="images/cod-bo4.png" alt="Call of Duty: Black Ops 4" />
+            <span>Call of Duty: Black Ops 4</span>
+          </div>
+          <div class="game-cover">
+            <img src="images/forza5.jpg" alt="Forza Horizon 5" />
+            <span>Forza Horizon 5</span>
+          </div>
+          <div class="game-cover">
+            <img src="images/f1.jpg" alt="Formula 1" style="object-position: 53% center;" />
+            <span>Formula 1</span>
+          </div>
+        </div>
+        <button class="game-slider__btn game-slider__btn--next" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__kicker" data-i18n="pricing.kicker">03 — Pricing</span>
+      <h2 class="section-head__title" data-i18n="pricing.title">Hourly Rates</h2>
+      <p class="pricing__note" data-i18n="pricing.note">All prices are per hour.</p>
+    </div>
+
+    <div class="pricing__grid">
+
+      <!-- VAJA-PSHAVELA -->
+      <div class="pricing__location">
+        <div class="pricing__location-head">
+          <p class="pricing__location-label" data-i18n="locations.vaja_kicker">01 — Vaja-Pshavela</p>
+          <h3 class="pricing__location-title" data-i18n="locations.vaja_title">Vaja-Pshavela Ave. 19</h3>
+        </div>
+        <div class="pricing__cards">
+
+          <div class="pricing__card">
+            <p class="pricing__room-name" data-i18n="locations.open_ps5">Open Area PS5</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2">2 gamepads</span>
+              <span class="pricing__price">8 ₾</span>
+            </div>
+          </div>
+
+          <div class="pricing__card">
+            <p class="pricing__room-name" data-i18n="locations.small_vip">Small VIP</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2">2 gamepads</span>
+              <span class="pricing__price">10 ₾</span>
+            </div>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_4">4 gamepads</span>
+              <span class="pricing__price">15 ₾</span>
+            </div>
+          </div>
+
+          <div class="pricing__card pricing__card--featured">
+            <p class="pricing__room-name" data-i18n="locations.standard_vip">Standard VIP</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2">2 gamepads</span>
+              <span class="pricing__price">15 ₾</span>
+            </div>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_4">4 gamepads</span>
+              <span class="pricing__price">20 ₾</span>
+            </div>
+          </div>
+
+          <div class="pricing__card">
+            <p class="pricing__room-name" data-i18n="locations.theater">Theater</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2_4">2–4 gamepads</span>
+              <span class="pricing__price">30 ₾</span>
+            </div>
+            <div class="pricing__row">
+              <span data-i18n="pricing.movie">Movie screening</span>
+              <span class="pricing__price">45 ₾</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIDI DIGOMI -->
+      <div class="pricing__location">
+        <div class="pricing__location-head">
+          <p class="pricing__location-label" data-i18n="locations.digomi_kicker">02 — Didi Digomi</p>
+          <h3 class="pricing__location-title" data-i18n="locations.digomi_title">Didi Digomi, 4 Petre Iberi St</h3>
+        </div>
+        <div class="pricing__cards">
+
+          <div class="pricing__card">
+            <p class="pricing__room-name" data-i18n="locations.open_ps5">Open Area PS5</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2">2 gamepads</span>
+              <span class="pricing__price">8 ₾</span>
+            </div>
+          </div>
+
+          <div class="pricing__card pricing__card--featured">
+            <p class="pricing__room-name" data-i18n="locations.vip">VIP</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2">2 gamepads</span>
+              <span class="pricing__price">15 ₾</span>
+            </div>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_4">4 gamepads</span>
+              <span class="pricing__price">20 ₾</span>
+            </div>
+          </div>
+
+          <div class="pricing__card pricing__card--ultra">
+            <p class="pricing__room-name" data-i18n="locations.ultra_vip">Ultra VIP</p>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_2">2 gamepads</span>
+              <span class="pricing__price">20 ₾</span>
+            </div>
+            <div class="pricing__row">
+              <span data-i18n="pricing.gamepads_4">4 gamepads</span>
+              <span class="pricing__price">25 ₾</span>
+            </div>
+          </div>
+
+          <div class="pricing__card">
+            <p class="pricing__room-name">Wheel</p>
+            <div class="pricing__row">
+              <span>Forza Horizon 5, Formula 1</span>
+              <span class="pricing__price">12 ₾</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUICK BOOKING ========== -->
+<section id="booking" class="booking">
+  <div class="container">
+    <div class="booking__inner">
+
+      <div class="booking__left">
+        <span class="section-head__kicker" data-i18n="booking.kicker"></span>
+        <h2 class="section-head__title" data-i18n="booking.title">Book a session.</h2>
+        <p class="booking__desc" data-i18n="booking.desc">Choose your location, pick a room and time — we'll have everything ready when you arrive.</p>
+      </div>
+
+      <form class="booking__form" id="bookingForm">
+        <div class="form-row">
+          <label>
+            <span data-i18n="booking.location">Location</span>
+            <select name="location" id="locationSelect" required>
+              <option value="" data-i18n="booking.select_location">Select location</option>
+              <option value="vaja" data-i18n="booking.loc_vaja">Vaja-Pshavela</option>
+              <option value="digomi" data-i18n="booking.loc_digomi">Didi Digomi</option>
+            </select>
+          </label>
+
+          <label>
+            <span data-i18n="booking.date">Date</span>
+            <input type="date" name="date" required />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span data-i18n="booking.name">Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            <span data-i18n="booking.room_number">Room Number</span>
+            <select name="room_number" id="roomNumberSelect" required>
+              <option value="" data-i18n="booking.select_room_number">Select room number</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row form-row--single">
+          <label>
+            <span data-i18n="booking.time_slot">Time Slot</span>
+            <select name="time" id="timeSelect" required>
+              <option value="" data-i18n="booking.select_time">Select time</option>
+            </select>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full" data-i18n="booking.confirm">Confirm Reservation</button>
+
+        <div class="form-status" id="formStatus" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GURU CARD ========== -->
+<section id="guru" class="guru">
+  <div class="container">
+
+    <div class="guru__grid">
+
+      <!-- Card visual -->
+      <div class="guru__cardwrap">
+        <div class="guru-card-placeholder"></div>
+
+      </div>
+
+      <!-- Registration panel -->
+      <div class="guru__panel">
+        <span class="section-head__kicker" data-i18n="guru.kicker"></span>
+        <h2 class="section-head__title accent-yellow" data-i18n-html="guru.title">Guru Card.</h2>
+        <p class="guru__desc" data-i18n="guru.desc">Every hour you play earns points. Redeem for free sessions or snacks. Come to Guru Game in person and our staff will register your card on the spot.</p>
+
+        <div class="guru__register-message">
+          <p data-i18n="guru.points_info">Get 1 Guru Point for 1 lari spent, 1 Guru Point is xx Lari</p>
+        </div>
+      </div>
+
+    </div>
+
+    <form class="guru__form guru__reg-form" id="guruRegForm">
+      <div class="form-row">
+        <label>
+          <span data-i18n="guru.reg_name">Name</span>
+          <input type="text" name="reg_name" required />
+        </label>
+        <label>
+          <span data-i18n="guru.reg_surname">Surname</span>
+          <input type="text" name="reg_surname" required />
+        </label>
+      </div>
+      <div class="form-row form-row--single">
+        <label>
+          <span data-i18n="guru.reg_phone">Phone Number</span>
+          <input type="tel" name="reg_phone" required />
+        </label>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full" data-i18n="guru.reg_submit">Register Card</button>
+      <div class="form-status" id="guruRegStatus" aria-live="polite"></div>
+    </form>
+
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo logo--sm">
+        <span class="logo__bracket">[</span>GURU<span class="logo__dot">.</span>GAME<span class="logo__bracket">]</span>
+      </span>
+      <a href="tel:+995322151518" class="footer__phone">032 2 15 15 18</a>
+      <p data-i18n="footer.copyright">© 2026 Guru Game. All rights reserved.</p>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer">
+      <a href="https://www.facebook.com/p/Guru-Game-გურუ-გეიმ-100088107048019/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+      <a href="https://www.instagram.com/gurugameroom/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@gurugame2022" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
